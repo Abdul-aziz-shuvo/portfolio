@@ -3,19 +3,34 @@ import useScript from "../hook/useScript";
 import useLink from "../hook/useLink";
 
 const Index = () => {
-    useLink("/vendor/bootstrap/css/bootstrap.min.css",'stylesheet')
+    // useLink("/vendor/bootstrap/css/bootstrap.min.css",'stylesheet')
+    // useLink("https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900",'stylesheet')
+    // useLink("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i",'stylesheet')
+    // useLink("/vendor/font-awesome/css/font-awesome.min.css",'stylesheet')
+    // useLink("/vendor/devicons/css/devicons.min.css",'stylesheet')
+    // useLink("/vendor/simple-line-icons/css/simple-line-icons.css",'stylesheet')
+    // useLink("/css/resume.min.css",'stylesheet')
+    //
+    // useScript("/vendor/jquery/jquery.min.js")
+    // useScript("/vendor/bootstrap/js/bootstrap.bundle.min.js")
+    // useScript("/vendor/bootstrap/js/bootstrap.bundle.min.js")
+    // useScript("/vendor/jquery-easing/jquery.easing.min.js")
+    // useScript("/js/resume.min.js")
+
+
+    useLink("vendor/bootstrap/css/bootstrap.min.css",'stylesheet')
     useLink("https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900",'stylesheet')
     useLink("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i",'stylesheet')
-    useLink("/vendor/font-awesome/css/font-awesome.min.css",'stylesheet')
-    useLink("/vendor/devicons/css/devicons.min.css",'stylesheet')
-    useLink("/vendor/simple-line-icons/css/simple-line-icons.css",'stylesheet')
-    useLink("/css/resume.min.css",'stylesheet')
+    useLink("vendor/font-awesome/css/font-awesome.min.css",'stylesheet')
+    useLink("vendor/devicons/css/devicons.min.css",'stylesheet')
+    useLink("vendor/simple-line-icons/css/simple-line-icons.css",'stylesheet')
+    useLink("css/resume.min.css",'stylesheet')
 
-    useScript("/vendor/jquery/jquery.min.js")
-    useScript("/vendor/bootstrap/js/bootstrap.bundle.min.js")
-    useScript("/vendor/bootstrap/js/bootstrap.bundle.min.js")
-    useScript("/vendor/jquery-easing/jquery.easing.min.js")
-    useScript("/js/resume.min.js")
+    useScript("vendor/jquery/jquery.min.js")
+    useScript("vendor/bootstrap/js/bootstrap.bundle.min.js")
+    useScript("vendor/bootstrap/js/bootstrap.bundle.min.js")
+    useScript("vendor/jquery-easing/jquery.easing.min.js")
+    useScript("js/resume.min.js")
 
 
 
