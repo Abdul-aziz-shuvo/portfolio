@@ -1,7 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
-import { FiMoon, FiSun } from 'react-icons/fi';
+import { FiMoon, FiSun, FiMenu, FiX } from 'react-icons/fi';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 interface NavbarProps {
     isDark: boolean;
@@ -10,6 +11,7 @@ interface NavbarProps {
 }
 
 export default function Navbar({ isDark, toggleTheme, handleNavigation }: NavbarProps) {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const router = useRouter();
 
     return (
@@ -28,7 +30,16 @@ export default function Navbar({ isDark, toggleTheme, handleNavigation }: Navbar
                     Portfolio
                 </motion.div>
 
-                <div className="flex items-center gap-8">
+                {/* Mobile Menu Button */}
+                <button
+                    className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                >
+                    {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
+                </button>
+
+                {/* Desktop Menu */}
+                <div className="hidden md:flex items-center gap-8">
                     <motion.button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
@@ -53,6 +64,39 @@ export default function Navbar({ isDark, toggleTheme, handleNavigation }: Navbar
                     </div>
                 </div>
             </div>
+
+            {/* Mobile Menu */}
+            <motion.div
+                initial={false}
+                animate={{ height: isMenuOpen ? 'auto' : 0, opacity: isMenuOpen ? 1 : 0 }}
+                className={`md:hidden overflow-hidden bg-white dark:bg-gray-900`}
+            >
+                <div className="px-4 py-2">
+                    {['About', 'Projects', 'Skills', 'Blog', 'Contact'].map((item) => (
+                        <motion.button
+                            key={item}
+                            onClick={() => {
+                                handleNavigation(item);
+                                setIsMenuOpen(false);
+                            }}
+                            className="block w-full text-left py-3 text-gray-800 dark:text-gray-200 hover:text-indigo-600 dark:hover:text-cyan-400 transition-colors cursor-pointer border-b border-gray-100 dark:border-gray-800"
+                            whileTap={{ scale: 0.98 }}
+                        >
+                            {item}
+                        </motion.button>
+                    ))}
+                    <div className="py-3 flex justify-between items-center">
+                        <span className="text-gray-800 dark:text-gray-200">Dark Mode</span>
+                        <motion.button
+                            whileTap={{ scale: 0.9 }}
+                            onClick={toggleTheme}
+                            className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+                        >
+                            {isDark ? <FiSun size={20} /> : <FiMoon size={20} />}
+                        </motion.button>
+                    </div>
+                </div>
+            </motion.div>
         </motion.nav>
     );
 } 
