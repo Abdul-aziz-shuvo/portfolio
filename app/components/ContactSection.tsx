@@ -58,7 +58,7 @@ export default function ContactSection() {
                             </div>
                             <div>
                                 <h3 className="font-medium text-gray-900 dark:text-white">Email</h3>
-                                <p className="text-gray-600 dark:text-gray-400">your.email@example.com</p>
+                                <p className="text-gray-600 dark:text-gray-400">shuvoahmedkhan202@gmail.com</p>
                             </div>
                         </div>
 
@@ -70,16 +70,15 @@ export default function ContactSection() {
                             </div>
                             <div>
                                 <h3 className="font-medium text-gray-900 dark:text-white">Phone</h3>
-                                <p className="text-gray-600 dark:text-gray-400">+1234567890</p>
+                                <p className="text-gray-600 dark:text-gray-400">+14376602408</p>
                             </div>
                         </div>
 
                         <div className="flex gap-4">
                             {/* Social Media Links */}
                             {[
-                                { name: 'GitHub', url: 'https://github.com/yourusername' },
-                                { name: 'LinkedIn', url: 'https://linkedin.com/in/yourusername' },
-                                { name: 'Twitter', url: 'https://twitter.com/yourusername' }
+                                { name: 'GitHub', url: 'https://github.com/abdul-aziz-shuvo' },
+                                { name: 'LinkedIn', url: 'https://www.linkedin.com/in/abdul-aziz-0585b5163' }
                             ].map((platform, index) => (
                                 <motion.a
                                     key={platform.name}

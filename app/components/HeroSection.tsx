@@ -54,7 +54,7 @@ export default function HeroSection({ scrollToContact }: HeroSectionProps) {
                             </span>
                         </motion.button>
                         <motion.a
-                            href="/your-cv.pdf"
+                            href="/Abdulaziz.pdf"
                             download
                             className="group relative px-6 sm:px-8 py-3 bg-transparent border-2 border-indigo-600 dark:border-cyan-500 rounded-full font-medium text-indigo-600 dark:text-cyan-400 overflow-hidden hover:text-white transition-colors duration-300"
                             whileHover={{ scale: 1.05 }}

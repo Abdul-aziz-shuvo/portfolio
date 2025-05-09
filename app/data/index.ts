@@ -9,12 +9,11 @@ import React from 'react';
 
 export const projects: Project[] = [
     {
-        title: "Modern Portfolio Website",
-        description: "A modern portfolio website built with Next.js and Tailwind CSS, featuring smooth animations and dark mode.",
-        image: "/projects/portfolio.jpg",
-        technologies: ["Next.js", "React", "Tailwind CSS", "Framer Motion"],
-        liveUrl: "https://your-portfolio.com",
-        githubUrl: "https://github.com/yourusername/portfolio"
+        title: "Wholsaleclub bd",
+        description: "A wholesale ecommerce site based on bangladesh",
+        image: "/projects/wholesaleclub.png",
+        technologies: ["React JS", "Laravel", "Tailwind CSS", ],
+        liveUrl: "https://wholesaleclubltd.com/",
     },
     {
         title: "E-Commerce Platform",

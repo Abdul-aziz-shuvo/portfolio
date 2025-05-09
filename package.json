@@ -9,8 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^44.3.0",
+    "@ckeditor/ckeditor5-react": "^9.5.0",
+    "@prisma/client": "^6.5.0",
     "@tailwindcss/typography": "^0.5.16",
     "framer-motion": "^12.4.7",
+    "jodit-react": "^5.2.19",
+    "mongodb": "^6.14.2",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -21,6 +26,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "postcss": "^8",
+    "prisma": "^6.5.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

@@ -2,34 +2,15 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import { useRouter } from 'next/navigation';
 
-const blogs = [
-    {
-        id: 1,
-        title: "Understanding React Server Components",
-        description: "Deep dive into React Server Components and how they revolutionize web development...",
-        date: "2024-01-15",
-        readTime: "5 min read",
-        image: "/blog1.jpg",
-        category: "React"
-    },
-    {
-        id: 2,
-        title: "The Power of TypeScript in Large Applications",
-        description: "Exploring how TypeScript improves development experience and code quality...",
-        date: "2024-01-20",
-        readTime: "7 min read",
-        image: "/blog2.jpg",
-        category: "TypeScript"
-    },
-    // Add more blog posts
-];
+
 
 export default function Blog() {
     const [isDark, setIsDark] = useState(true);
+    const [blogs,setBlogs] = useState<any>([])
     const router = useRouter();
 
     const toggleTheme = () => {
@@ -44,6 +25,19 @@ export default function Blog() {
             router.push('/#' + item.toLowerCase());
         }
     };
+
+    const generateSlug = (title:string,id:string) => {
+        return title.toLocaleLowerCase().trim()  .replace(/\s+/g, '-') + "_"+ id 
+    }
+    useEffect(() => {
+        const fetchBlogs = async () => {
+          const res = await fetch('/api/blog')
+          const data = await res.json()
+          setBlogs(data)
+        }
+    
+        fetchBlogs()
+      }, [])
 
     return (
         <div className="min-h-screen bg-white dark:bg-[#0a0a0a] text-black dark:text-white font-poppins">
@@ -70,32 +64,32 @@ export default function Blog() {
                             transition={{ duration: 0.5 }}
                             className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
                         >
-                            <Link href={`/blog/${blog.id}`}>
+                            <Link href={`/blog/${generateSlug(blog.title,blog.id)}`}>
                                 <div className="relative h-48">
-                                    <Image
-                                        src={blog.image}
+                                    {/* <Image
+                                        src={blog.image ?? '#'}
                                         alt={blog.title}
                                         fill
                                         className="object-cover"
-                                    />
+                                    /> */}
                                 </div>
                                 <div className="p-6">
                                     <div className="flex items-center gap-4 mb-4">
                                         <span className="text-sm text-indigo-600 dark:text-cyan-400">
-                                            {blog.category}
+                                            {blog.category ?? ''}
                                         </span>
                                         <span className="text-sm text-gray-500">
-                                            {blog.date}
+                                            {blog.date ?? ''}
                                         </span>
                                         <span className="text-sm text-gray-500">
-                                            {blog.readTime}
+                                            {blog.readTime ?? ''}
                                         </span>
                                     </div>
                                     <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
                                         {blog.title}
                                     </h2>
                                     <p className="text-gray-600 dark:text-gray-400">
-                                        {blog.description}
+                                        {blog.content.split(' ').slice(0,10).join(' ') +'...'}
                                     </p>
                                     <div className="mt-4 flex items-center text-indigo-600 dark:text-cyan-400">
                                         Read More
