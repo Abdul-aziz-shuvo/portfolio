@@ -1,36 +1,30 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Welcome to the source code of my personal portfolio website! This project showcases who I am, my work, and how to get in touch with me. It’s built to reflect my skills, experience, and interests in web development/design (or your field).
 
-## Getting Started
+🚀 Live Demo
+Check it out here: (https://abdulazizshuvo.netlify.app/)
 
-First, run the development server:
+📸 Features
+👤 About Me section
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🛠️ Projects gallery
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+📫 Contact form
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+💡 Tech stack highlights
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🌙 Dark/light mode (if applicable)
 
-## Learn More
+⚙️ Responsive design for all screen sizes
 
-To learn more about Next.js, take a look at the following resources:
+🧰 Built With
+List the main technologies or frameworks used. Example:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+HTML5 / CSS3
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+JavaScript (ES6+)
 
-## Deploy on Vercel
+React.js / Next JS
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Tailwind CSS
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+GitHub Pages for deployment
