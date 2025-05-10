@@ -27,4 +27,8 @@ React.js / Next JS
 
 Tailwind CSS
 
+Prisma
+
+Mongodb
+
 GitHub Pages for deployment
